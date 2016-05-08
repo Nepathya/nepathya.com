@@ -1,5 +1,5 @@
 from django.contrib import admin
-from gallery.models import Album, Image
+from .models import Album, Image
 
 
 class ImageInline(admin.TabularInline):

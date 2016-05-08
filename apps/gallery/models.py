@@ -116,7 +116,6 @@ class Image(models.Model):
     description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(editable=False)
     updated_at = models.DateTimeField(editable=False)
-    plugin = models.ForeignKey(AlbumPlugin, related_name='album_plugin', blank=True, null=True)
 
     @property
     def file_name(self):
