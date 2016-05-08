@@ -22,7 +22,7 @@ INSTALLED_APPS = (
     # 'linaro_django_pagination',
     # 'webstack_django_sorting',
     #
-    # 'apps.users',
+    'apps.discography',
     # 'apps.tracking',
     # 'apps.api_v1',
 )
