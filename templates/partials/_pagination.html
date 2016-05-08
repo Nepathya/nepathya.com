@@ -1,0 +1,58 @@
+{% if is_paginated %}
+    {% load i18n %}
+    <ul class="pagination hidden-print pull-right">
+
+        {% block previouslink %}
+            {% if page_obj.has_previous %}
+                {% if disable_link_for_first_page and page_obj.previous_page_number == 1 %}
+                    <li class="prev-page">
+                        <a class="icon-arrow-left"
+                           href="{{ request.path }}{% if getvars %}?{{ getvars|slice:"1:" }}{% endif %}">{% trans 'Previous' %}</a>
+                    </li>
+                {% else %}
+                    <li class="prev-page">
+                        <a class="icon-arrow-left"
+                           href="?page{{ page_suffix }}={{ page_obj.previous_page_number }}{{ getvars }}">{% trans 'Previous' %}</a>
+                    </li>
+                {% endif %}
+            {% else %}
+                {% if display_disabled_previous_link %}
+                    <span class="disabled prev">{{ previous_link_decorator|safe }}{% trans "previous" %}</span>
+                {% endif %}
+            {% endif %}
+        {% endblock previouslink %}
+
+        {% block pagelinks %}
+            {% if display_page_links %}{% for page in pages %}
+                {% if page %}
+                    {% ifequal page page_obj.number %}
+                        <li class="active"><a>{{ page }}</a></li>
+                    {% else %}
+                        {% if disable_link_for_first_page and page == 1 %}
+                            <li>
+                                <a href="{{ request.path }}{% if getvars %}?{{ getvars|slice:"1:" }}{% endif %}">{{ page }}</a>
+                            </li>
+                        {% else %}
+                            <li><a href="?page{{ page_suffix }}={{ page }}{{ getvars }}">{{ page }}</a></li>
+                        {% endif %}
+                    {% endifequal %}
+                {% else %}
+                    ...
+                {% endif %}
+            {% endfor %}{% endif %}
+
+        {% endblock pagelinks %}
+
+        {% block nextlink %}
+            {% if page_obj.has_next %}
+                <li class="next-page"><a class="icon-arrow-right"
+                                         href="?page{{ page_suffix }}={{ page_obj.next_page_number }}{{ getvars }}">{% trans 'Next' %}</a></li>
+            {% else %}
+                {% if display_disabled_next_link %}
+                    <span class="disabled next">{% trans "next" %}{{ next_link_decorator|safe }}</span>
+                {% endif %}
+            {% endif %}
+        {% endblock nextlink %}
+
+    </ul>
+{% endif %}
