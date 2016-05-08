@@ -25,6 +25,7 @@ INSTALLED_APPS = (
     'apps.discography',
     'apps.news',
     'apps.gallery',
+    'apps.video',
 )
 
 MIDDLEWARE_CLASSES = (
