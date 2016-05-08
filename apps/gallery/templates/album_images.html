@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles thumbnail %}
+
+{% block title %}
+    {{ album_name|lower }}
+{% endblock %}
+
+{% block extrahead %}
+    <link href="{% static "gallery/gallery.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "colorbox/colorbox.css" %}" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="h1">{{ album_name|upper }}<!--button type="button" class="btn btn-default btn-lg pull-right">Add Image</button--></h1>
+      </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+       <div class="col-xs-12 col-md-12" id="gallery-images">
+            {% for obj in images %}
+            <div class="pull-left">
+                <div class="thumbnail album-image">
+                {% thumbnail obj.file "240x140" as im %}
+                <a href="{{ obj.file.url }}" class="gallery" title="{{ obj.name }}">
+                  <img id="gallery-image" src="{{ im.url }}" alt="No image" >
+                </a>
+                {% endthumbnail %}
+                  <div class="caption">
+                    <h3 class="h3" id="gallery-name">{% render_model obj 'title' %}</h3>
+                    <p id="gallery-description">{{ obj.description }}</p>
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<br>
+
+<!--div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="row">
+              <div class="col-md-12">
+                <img id="modal-image" src="" alt="">
+                <div class="margin-left-right">
+                <div class="container-fluid">
+                        <div class='row'>
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+
+                                <button type="button" class="btn btn-default btn-lg previous">Previous</button>
+                                <button type="button" class="btn btn-default btn-lg next pull-right">Next</button>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <div>
+                                    <h3 class='h3' id="name"></h3>
+                                    <p id="description"></p>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div-->
+{% endblock %}
+
+{% block extra_script %}
+    <script src="{% static "colorbox/jquery.colorbox-min.js" %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('a.gallery').colorbox({ opacity:0.5 , rel:'group1', maxWidth:'95%', maxHeight:'95%'});
+        });
+    </script>
+    {% endblock %}
