@@ -1,17 +1,10 @@
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.db import models
 import datetime
-from cms.models import CMSPlugin
 from django.template.defaultfilters import slugify
 import re
 import os
 
-class AlbumPlugin(CMSPlugin):
-    title = models.CharField(max_length=32, blank=True, null=True)
-    album = models.ForeignKey('Album', related_name='plugins')
-
-    def __unicode__(self):
-        return self.title
 
 def _slug_strip(value, separator='-'):
     """
@@ -80,7 +73,6 @@ def unique_slugify(instance, value, slug_field_name='slug', queryset=None, slug_
         next += 1
 
     setattr(instance, slug_field.attname, slug)
-
 
 
 class Album(models.Model):
@@ -153,5 +145,5 @@ class Image(models.Model):
         if not self.name:
             return self.file_name
         return self.name
-        
+
 # Create your models here.
