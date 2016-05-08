@@ -3,6 +3,7 @@ Django
 webstack-django-sorting
 djangorestframework
 requests
+Pillow
 
 ipdb
 django-debug-toolbar

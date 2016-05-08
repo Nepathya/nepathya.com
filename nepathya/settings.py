@@ -23,7 +23,7 @@ INSTALLED_APPS = (
     # 'webstack_django_sorting',
     #
     'apps.discography',
-    # 'apps.tracking',
+    'apps.news',
     # 'apps.api_v1',
 )
 
