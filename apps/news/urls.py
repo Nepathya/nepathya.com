@@ -8,10 +8,7 @@ web_urls = [
 ]
 
 api_urls = [
-    url(r'^api/genres/$', api.GenreListAPI.as_view()),
-    url(r'^api/albums/$', api.AlbumListAPI.as_view()),
-    url(r'^api/tracks/$', api.TrackListAPI.as_view()),
-    url(r'^api/labels/$', api.LabelListAPI.as_view()),
+    url(r'^api/news/$', api.NewsListAPI.as_view()),
 ]
 
 api_urls = format_suffix_patterns(api_urls)

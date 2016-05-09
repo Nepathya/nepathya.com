@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', discography_views.discography),
     url(r'^discography/', include('apps.discography.urls')),
+    url(r'^news/', include('apps.news.urls')),
 
 ]
