@@ -19,6 +19,7 @@ from apps.discography import views as discography_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', discography_views.discography),
+    url(r'^$', discography_views.discography),
+    url(r'^discography/', include('apps.discography.urls')),
 
 ]
