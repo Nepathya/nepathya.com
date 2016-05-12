@@ -6,7 +6,9 @@ from . import views
 
 web_urls = [
     url(r'^album/list/$', views.AlbumList.as_view(), name="album_list"),
-    url(r'^album/detail/(?P<pk>\d+)/$', views.AlbumDetail.as_view(), name="album_detail")
+    url(r'^album/detail/(?P<pk>\d+)/$', views.AlbumDetail.as_view(), name="album_detail"),
+    url(r'^track/list/$', views.TrackList.as_view(), name="track_list"),
+    url(r'^track/detail/(?P<pk>\d+)/$', views.TrackDetail.as_view(), name="track_detail"),
 ]
 
 api_urls = [
