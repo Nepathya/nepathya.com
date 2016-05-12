@@ -1,5 +1,5 @@
 {% extends "_base.html" %}
-{% load staticfiles cms_tags i18n thumbnail %}
+{% load staticfiles i18n thumbnail %}
 
 {% block title %}
 	{% trans 'Gallery' %}
@@ -12,32 +12,5 @@
 
 {% block content %}
 
-<div class="row">
-	<div class="col-md-12">
-		<h2>{% trans 'Gallery' %}</h2>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		{% placeholder gallery %}
-	</div>	
-</div>	
-
-{% for album in albums %}
-
-<div class="thumbnail album-thumbnail">
-	<a href="{% url 'album-images' album.slug %}">
-	{% thumbnail album.get_thumbnail.file "240x140" as image %}
-		<img src="{{ image.url }}" alt="No Image">
-	{% endthumbnail %}
-	</a>
-	<div class="caption">
-		<h3 class="h3">{% render_model album "name" %}</h3>
-		<p>{{ album.description }}</p>
-	</div>
-</div>
-
-{% endfor %}
 
 {% endblock %}

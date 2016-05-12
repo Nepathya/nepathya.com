@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from django.views import generic
+from models import News
 
-# Create your views here.
+
+class NewsList(generic.ListView):
+    model = News
+
+
+class NewsDetail(generic.DetailView):
+    model = News

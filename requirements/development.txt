@@ -4,6 +4,8 @@ webstack-django-sorting
 djangorestframework
 requests
 Pillow
+easy-thumbnails
+sorl-thumbnail
 
 ipdb
 django-debug-toolbar

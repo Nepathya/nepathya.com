@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^discography/', include('apps.discography.urls')),
     url(r'^news/', include('apps.news.urls')),
     url(r'^gallery/', include('apps.gallery.urls')),
-
+    url(r'^video/', include('apps.video.urls')),
 ]
