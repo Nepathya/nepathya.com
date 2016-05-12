@@ -2,9 +2,11 @@ from django.conf.urls import url
 
 from rest_framework.urlpatterns import format_suffix_patterns
 from . import api
+from . import views
 
 web_urls = [
-
+    url(r'^album/list/$', views.AlbumList.as_view(), name="album_list"),
+    url(r'^album/detail/(?P<pk>\d+)/$', views.AlbumDetail.as_view(), name="album_detail")
 ]
 
 api_urls = [
