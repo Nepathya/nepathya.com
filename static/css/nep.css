@@ -1,0 +1,215 @@
+html{
+    background-size:cover;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#992b9c+0,bb2334+100 */
+background: #992b9c; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #992b9c 0%, #bb2334 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  #992b9c 0%,#bb2334 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  #992b9c 0%,#bb2334 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#992b9c', endColorstr='#bb2334',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+body{
+     background: url(../img/bg-img.png);
+     background-size: cover; 
+
+}
+
+.instabox{
+
+}
+
+.instagram,.instagram_top{
+    background: transparent;
+}
+.logo img{
+	width:200px;
+}
+
+
+.welcome_box p{
+	line-height: 30px;
+}
+
+ul.wmuSliderPagination,
+.wmuSliderPrev,
+.wmuSliderNext{
+	display: none !important;
+}
+
+.header{
+	overflow: hidden;
+
+}
+.header .container{
+	height: 100%;
+}
+
+.header .index-banner{
+	position: absolute;
+	bottom: 100px;
+}
+
+.videobg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.header .header-top{
+	 padding: 2em 0 3em;
+    position: relative;
+    z-index: 1
+}
+
+.videobg video{
+	margin-top: -150px;
+}
+
+.welcome_box{
+	
+    padding: 5em 1.4em;
+    margin-top: 10px;
+    border: 4px solid #FFF;
+
+}
+.welcome_box *{
+	color: #FFF !important;
+}
+
+.banner_right * {
+    color: #FFF !important;
+    text-shadow: 1px 1px 4px #333;
+    }
+
+
+    .banner_btn{
+    	background: transparent;
+    	border: 2px solid #FFF;
+    }
+    .banner_btn:hover{
+    	background: #E74C3C;
+    }
+
+    ul.nav{
+    	
+
+    background: #9a1e6f; /* Old browsers */
+background: -moz-linear-gradient(45deg, #9a1e6f 0%, #dfea0b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #9a1e6f 0%,#dfea0b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #9a1e6f 0%,#dfea0b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a1e6f', endColorstr='#dfea0b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+-webkit-clip-path:polygon(1% 1%, 73% 5%, 98% 94%, 3% 100%);
+clip-path:polygon(1% 1%, 73% 5%, 98% 94%, 3% 100%);
+
+
+transition: all .5s;
+-webkit-transition: all .5s;
+    }
+
+    ul.nav:hover {
+-webkit-clip-path: polygon(0% 1%, 90% 6%, 89% 85%, 6% 100%);
+clip-path: polygon(0% 1%, 90% 6%, 89% 85%, 6% 100%);
+    }
+
+    .banner_right{
+    	width: 65%;
+        margin:0 !important;
+    }
+
+    .bannertop_box{
+    	width: 30%;
+    }
+.header .index-banner{
+        position: absolute;
+    bottom: 100px;
+    width: 100%;
+}
+}
+    .index-banner .example1{
+        height: 100%;
+    }
+ .index-banner article{
+    position: absolute;
+    height: 100%;
+    max-width: 800px;
+
+ }
+ .index-banner .banner-wrap{
+    position: absolute;
+    bottom: 0;
+ }
+ ul.nav li a{
+    color:#FFF;
+ }
+
+ .product_image .mask{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-120%);
+ }
+
+ .instagram h3, h3.m_2, 
+.instagram .small,
+.instagram i
+ {
+    text-align: center;
+    color: #FFF;
+    letter-spacing: 12px;
+    font-weight: 200;
+    margin: 80px 0;
+ }
+
+ .latest-vid .inner_content {
+background: transparent;
+text-align: center;
+ }
+
+  .latest-vid .inner_content .product_image{
+    border:none;
+    text-align: center;
+    padding: 10px;
+  
+}
+.latest-vid .inner_content .product_image img{
+    width: 100%;
+    height: 250px;
+      border:10px solid rgba(255,255,255,.6);
+}
+
+.latest-vid .inner_content .cart-left{
+    float: none;
+   
+    margin-top : 0px;
+    text-transform: uppercase;
+}
+
+.latest-vid .inner_content .title{
+text-align: center;
+color:#333;
+background: #dfea0b;
+    display: inline-block;
+    padding: 10px
+}
+.footer{
+    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+
+background: rgba(0,0,0,.7)
+}
+
+.copy{
+    text-align: center
+}
+.copy p a{
+    color:#FFF;
+    text-decoration: underline;
+
+}
+
+
+.footer-grid_last{
+    width:22%;
+}

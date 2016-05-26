@@ -2,4 +2,5 @@
 .idea
 *~
 *.sqlite3
+static/vid
 mzoom/local_settings.py

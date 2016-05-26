@@ -1,0 +1,65 @@
+{% load staticfiles i18n %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        {% block whole_title %}
+            {% block title %}{% endblock %} | {% trans 'Nepathya' %}
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href='{% static "bootstrap/css/bootstrap.min.css" %}' type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'metis/metisMenu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    <script src='{% static "js/libs/jquery-2.1.4.min.js" %}'></script>
+    <script src="{% static 'js/base.js' %}"></script>
+
+    {% block extrastyle %} {% endblock %}
+    {% block extrahead %}{% endblock %}
+
+
+</head>
+
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}">
+
+{% include 'partials/_header.html' %}
+
+<div id="wrapper">
+
+
+    <div id="page-wrapper">
+        <div class="page-header-bar row">
+            <div class="col-lg-7">
+                <h1>{% block page-header %}{% endblock %}</h1>
+            </div>
+            <div class="col-md-5 text-right">
+                {% block header-buttons %}
+                {% endblock %}
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        {% block content %}{% endblock %}
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+
+<script src='{% static "bootstrap/js/bootstrap.min.js" %}'></script>
+<script src="{% static 'js/libs/bootstrap-notify.min.js' %}"></script>
+
+{% block extrabody %}
+{% endblock %}
+{% include 'partials/_footer.html' %}
+</body>
+</html>
