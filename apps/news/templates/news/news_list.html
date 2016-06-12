@@ -6,7 +6,9 @@
 
 
 {% block content %}
-
+{% for obj in object_list %}
+	{{ obj }}
+{% endfor %}
 {% endblock %}
 
 {% block footer %}
