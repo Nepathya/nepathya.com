@@ -9,7 +9,7 @@ web_urls = [
 ]
 
 api_urls = [
-
+    url(r'^api/', api.VideoListAPI.as_view())
 ]
 
 api_urls = format_suffix_patterns(api_urls)

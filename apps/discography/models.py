@@ -13,7 +13,6 @@ class Genre(models.Model):
 
 class Album(models.Model):
     title = models.CharField(max_length=250)
-    description = models.CharField(max_length=250, blank=True, null=True)
     cover_image = models.ImageField(blank=True, null=True)
     year = models.PositiveIntegerField(blank=True, null=True)
     released_date = models.DateField(blank=True, null=True)
