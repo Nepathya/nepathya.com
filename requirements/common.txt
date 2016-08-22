@@ -4,5 +4,5 @@ webstack-django-sorting
 djangorestframework
 requests
 Pillow
-easy-thumbnails
+#easy-thumbnails
 sorl-thumbnail
