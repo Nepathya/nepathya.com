@@ -9,4 +9,6 @@ class Video(models.Model):
     description = models.TextField(blank=True, null=True)
     release_date = models.DateTimeField(blank=True, null=True)
 
+    def __str__(self):
+        return self.title
 # Create your models here.

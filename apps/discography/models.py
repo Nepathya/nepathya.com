@@ -20,6 +20,9 @@ class Album(models.Model):
     genre = models.ForeignKey(Genre, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return self.title
+
 
 class Track(models.Model):
     header = models.CharField(max_length=30)
@@ -36,3 +39,6 @@ class Track(models.Model):
     released_date = models.DateField(blank=True, null=True)
     label = models.ForeignKey(Label, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title
