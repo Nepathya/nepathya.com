@@ -1,8 +1,9 @@
-from settings import *
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from .settings import INSTALLED_APPS, TEMPLATES
 
 SECRET_KEY = '=s0$)ng6s4x@tt=e+v3hygikjuwn3d_m1ihz$m07e(g#bhj)xz'
-
-
 DEBUG = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'static')
