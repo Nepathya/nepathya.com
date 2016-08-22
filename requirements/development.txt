@@ -1,11 +1,3 @@
-Django
--e git+https://github.com/areski/django-pagination.git@fix-xrange-slice#egg=linaro-django-pagination
-webstack-django-sorting
-djangorestframework
-requests
-Pillow
-easy-thumbnails
-sorl-thumbnail
-
+-r common.txt
 ipdb
 django-debug-toolbar
