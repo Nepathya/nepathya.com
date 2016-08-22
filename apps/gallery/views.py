@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from models import Image, Album
+from .models import Image, Album
 
 
 def album_list(request):

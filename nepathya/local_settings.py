@@ -1,9 +1,8 @@
-from settings import *
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from .settings import INSTALLED_APPS, TEMPLATES
 
 SECRET_KEY = '=s0$)ng6s4x@tt=e+v3hygikjuwn3d_m1ihz$m07e(g#bhj)xz'
-
-# ADMINS = [('Milan Tamang', 'milan.tamang@tgsolutions.co')]
-# SERVER_EMAIL = 'webmaster@mzoom.mtradeasia.com'
 
 DEBUG = True
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from models import Album, Track
+from .models import Album, Track
 
 
 def index(request):

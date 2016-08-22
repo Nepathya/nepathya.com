@@ -1,7 +1,7 @@
 from rest_framework import generics
 
-from models import Label, Track, Album, Genre
-from serializers import LabelSerializer, TrackSerializer, AlbumSerializer, GenreSerializer
+from .models import Label, Track, Album, Genre
+from .serializers import LabelSerializer, TrackSerializer, AlbumSerializer, GenreSerializer
 
 
 class LabelListAPI(generics.ListAPIView):

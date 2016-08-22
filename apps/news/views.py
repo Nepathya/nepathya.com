@@ -1,6 +1,5 @@
-from django.shortcuts import render
 from django.views import generic
-from models import News
+from .models import News
 
 
 class NewsList(generic.ListView):

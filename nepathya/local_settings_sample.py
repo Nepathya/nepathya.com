@@ -2,8 +2,6 @@ from settings import *
 
 SECRET_KEY = '=s0$)ng6s4x@tt=e+v3hygikjuwn3d_m1ihz$m07e(g#bhj)xz'
 
-# ADMINS = [('Milan Tamang', 'milan.tamang@tgsolutions.co')]
-# SERVER_EMAIL = 'webmaster@mzoom.mtradeasia.com'
 
 DEBUG = True
 
