@@ -9,6 +9,8 @@ class ImageSerializer(serializers.ModelSerializer):
 
 
 class AlbumSerializer(serializers.ModelSerializer):
+    images = ImageSerializer(many=True)
+
     class Meta:
         model = Album
         exclude = ()

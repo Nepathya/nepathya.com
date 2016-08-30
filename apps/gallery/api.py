@@ -15,3 +15,7 @@ class AlbumListAPI(generics.ListAPIView):
     serializer_class = AlbumSerializer
     queryset = Album.objects.all()
     pagination_class = CustomPagination
+
+class AlbumDetailAPI(generics.RetrieveAPIView):
+    serializer_class = AlbumSerializer
+    queryset = Album.objects.all()
