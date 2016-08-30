@@ -14,13 +14,15 @@ class GenreSerializer(serializers.ModelSerializer):
         exclude = ()
 
 
-class AlbumSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Album
-        exclude = ()
-
-
 class TrackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Track
+        exclude = ()
+
+
+class AlbumSerializer(serializers.ModelSerializer):
+    tracks = TrackSerializer(many=True)
+
+    class Meta:
+        model = Album
         exclude = ()

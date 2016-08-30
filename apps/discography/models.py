@@ -34,7 +34,7 @@ class Track(models.Model):
     genre = models.ForeignKey(Genre, blank=True, null=True)
     cover_image = models.ImageField(blank=True, null=True)
     copyright = models.CharField(max_length=200, blank=True, null=True)
-    album = models.ForeignKey(Album, blank=True, null=True)
+    album = models.ForeignKey(Album, blank=True, null=True, related_name='tracks')
     length = models.PositiveIntegerField(blank=True, null=True)
     released_date = models.DateField(blank=True, null=True)
     label = models.ForeignKey(Label, blank=True, null=True)

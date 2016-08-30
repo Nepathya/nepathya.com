@@ -14,6 +14,7 @@ web_urls = [
 api_urls = [
     url(r'^api/genres/$', api.GenreListAPI.as_view()),
     url(r'^api/albums/$', api.AlbumListAPI.as_view()),
+    url(r'^api/albums/(?P<pk>\d+)$', api.AlbumDetailtAPI.as_view()),
     url(r'^api/tracks/$', api.TrackListAPI.as_view()),
     url(r'^api/labels/$', api.LabelListAPI.as_view()),
 ]
