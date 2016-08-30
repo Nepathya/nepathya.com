@@ -26,6 +26,7 @@ INSTALLED_APPS = (
     'apps.news',
     'apps.gallery',
     'apps.video',
+    'apps.events',
 )
 
 MIDDLEWARE_CLASSES = (
