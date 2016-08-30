@@ -19,7 +19,7 @@ class AlbumListAPI(generics.ListAPIView):
     queryset = Album.objects.all()
 
 
-class AlbumDetailtAPI(generics.RetrieveAPIView):
+class AlbumDetailAPI(generics.RetrieveAPIView):
     serializer_class = AlbumSerializer
     queryset = Album.objects.all()
 
