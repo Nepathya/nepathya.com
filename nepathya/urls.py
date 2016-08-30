@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^news/', include('apps.news.urls')),
     url(r'^gallery/', include('apps.gallery.urls')),
     url(r'^video/', include('apps.video.urls')),
+    url(r'^events/', include('apps.events.urls')),
 ]
 
 from django.conf.urls.static import static
