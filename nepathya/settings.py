@@ -27,6 +27,7 @@ INSTALLED_APPS = (
     'apps.gallery',
     'apps.video',
     'apps.events',
+    'apps.feedback',
 )
 
 MIDDLEWARE_CLASSES = (

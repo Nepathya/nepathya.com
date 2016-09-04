@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^gallery/', include('apps.gallery.urls')),
     url(r'^video/', include('apps.video.urls')),
     url(r'^events/', include('apps.events.urls')),
+    url(r'^feedbacks/', include('apps.feedback.urls')),
 ]
 
 from django.conf.urls.static import static
