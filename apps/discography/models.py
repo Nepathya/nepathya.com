@@ -24,6 +24,16 @@ class Album(models.Model):
         return self.title
 
 
+class MusicStore(models.Model):
+    name = models.CharField(max_length=250)
+    icon = models.ImageField()
+    url = models.URLField()
+    album = models.ForeignKey(Album, related_name="music_store")
+
+    def __str__(self):
+        return self.name + '| ' + str(self.url)
+
+
 class Track(models.Model):
     header = models.CharField(max_length=30)
     title = models.CharField(max_length=30)
