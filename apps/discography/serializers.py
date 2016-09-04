@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Label, Genre, Album, Track
+from .models import Label, Genre, Album, Track, MusicStore
 
 
 class LabelSerializer(serializers.ModelSerializer):
@@ -19,9 +19,16 @@ class TrackSerializer(serializers.ModelSerializer):
         model = Track
         exclude = ()
 
+class MusicStoreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MusicStore
+        exclude = ()
+
+
 
 class AlbumSerializer(serializers.ModelSerializer):
     tracks = TrackSerializer(many=True)
+    music_store = MusicStoreSerializer(many=True)
 
     class Meta:
         model = Album
