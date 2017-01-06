@@ -27,7 +27,7 @@ body a{
 	-o-background-size: cover;
 	background-size: cover;
 	background-position: center;
-	background-size: 100%;
+	background-size: cover;
 }
 .header-top {
 	padding: 2em 0 3em;

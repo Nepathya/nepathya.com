@@ -211,3 +211,7 @@ ul.nav li a {
 .footer-grid_last {
     width: 22%;
 }
+
+.content {
+    min-height: 500px;
+}
