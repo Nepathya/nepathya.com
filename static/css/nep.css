@@ -228,7 +228,7 @@ ul.right-nav li:hover {
     text-align: center;
 }
 
-ul.right-nav li:hover a {
+ul.right-nav a:hover {
     text-decoration: none;
 }
 
@@ -236,7 +236,7 @@ ul.right-nav li:hover a {
     padding: 10px;
 }
 
-.right-nav li a {
+.right-nav a li {
     color: #FFFFFF;
     font-size: 0.85em;
     text-transform: uppercase;
