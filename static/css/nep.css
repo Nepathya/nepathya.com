@@ -112,7 +112,8 @@ ul.nav:hover {
 
 .banner_right {
     width: 65%;
-    margin: 0 !important;
+    /*margin: 0 !important;*/
+    margin-left: 4em;
 }
 
 .bannertop_box {
@@ -210,4 +211,40 @@ ul.nav li a {
 
 .footer-grid_last {
     width: 22%;
+}
+
+.right-nav {
+    display: inline-flex;
+    list-style: none;
+    padding-left: 17px;
+    margin-top: 1em;
+    font-size: 15px;
+}
+
+ul.right-nav li:hover {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+ul.right-nav li:hover a {
+    text-decoration: none;
+}
+
+.right-nav li {
+    padding: 10px;
+}
+
+.right-nav li a {
+    color: #FFFFFF;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    /*padding: 10px 15px 10px 40px;*/
+}
+
+ul.social li a i:hover{
+    background-color: #333;
+
 }
