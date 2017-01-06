@@ -88,7 +88,8 @@ ul.wmuSliderPagination,
 }
 
 .banner_btn:hover {
-    background: #E74C3C;
+    /*background: #E74C3C;*/
+    background: #333;
 }
 
 ul.nav {
