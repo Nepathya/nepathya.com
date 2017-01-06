@@ -200,8 +200,8 @@ ul.nav li a {
 }
 
 .footer {
-    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    /*-webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);*/
+    /*clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);*/
 
     background: rgba(0, 0, 0, .7)
 }
@@ -266,4 +266,12 @@ ul.social li a i:hover{
 .mask:hover {
     background: #fff51f;
     color: #000;
+}
+
+.instabox {
+    background-color: #FFFFFF;
+}
+
+.instabox .instagram_top h3 {
+    color: #000000;
 }
