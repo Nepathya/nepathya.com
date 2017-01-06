@@ -682,7 +682,8 @@ p.title a:hover{
 	color:#7DB122;
 }
 .product_container {
-	padding: 1em;
+    background-color: #333;
+	/*padding: 1em;*/
 }
 .price{
 	float: right;
@@ -787,6 +788,20 @@ h3.m_2 {
    -ms-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
 }
+
+
+.view-first:hover a .inner_content .product_image img {
+    opacity: 0.5;
+}
+
+.view-first:hover .product_container{
+    background-color: #fff51f;
+}
+
+.view-first:hover .product_container p {
+    color: #000;
+}
+
 .view-first:hover .mask {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
    filter: alpha(opacity=100);
