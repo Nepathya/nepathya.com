@@ -22,12 +22,14 @@ body a{
 }
 .header{
 	background: url(../img/1.jpg) no-repeat center top;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
-	background-position: center;
-	background-size: cover;
 }
 .header-top {
 	padding: 2em 0 3em;
