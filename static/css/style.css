@@ -972,6 +972,7 @@ ul.list1 a {
 }
 .feedback-form input, .feedback-form textarea {
     width: 90%;
+    text-transform: none;
 }
 
 .feedback-form p {

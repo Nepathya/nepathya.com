@@ -22,6 +22,13 @@
 </head>
 <body>
 <div class="header">
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <div class="container">
         {#        <div class="videobg">#}
         {#            <video controls="false" autoplay="autoplay" poster="{% static 'vid/vid.jpg' %}" style="width:100%"#}
@@ -36,13 +43,27 @@
                 <a href="index.html"><img src="{% static 'img/logo.png' %}" alt=""/></a>
             </div>
             <ul class="right-nav">
-                <a href="#"><li>About Band</li></a>
-                <a href="#"><li>Music</li></a>
-                <a href="#"><li>Videos</li></a>
-                <a href="#"><li>Events</li></a>
-                <a href="#"><li>Gallery</li></a>
-                <a href="#"><li>News</li></a>
-                <a href="#"><li>Contact</li></a>
+                <a href="#">
+                    <li>About Band</li>
+                </a>
+                <a href="#">
+                    <li>Music</li>
+                </a>
+                <a href="#">
+                    <li>Videos</li>
+                </a>
+                <a href="#">
+                    <li>Events</li>
+                </a>
+                <a href="#">
+                    <li>Gallery</li>
+                </a>
+                <a href="#">
+                    <li>News</li>
+                </a>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
             </ul>
 
             <div class="header_right">
@@ -149,8 +170,8 @@
     $(document).ready(function () {
         var winheight = $(window).height();
         $(".header").css("height", winheight + "px");
-
     });
+    $(".messages").delay( 3000 ).slideUp( 300 );
 </script>
 
-    </html>
+</html>
