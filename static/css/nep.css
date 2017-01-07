@@ -216,7 +216,7 @@ ul.nav li a {
 }
 
 .footer-grid_last {
-    width: 22%;
+    width: 35%;
 }
 
 .right-nav {
@@ -225,6 +225,7 @@ ul.nav li a {
     padding-left: 17px;
     margin-top: 1em;
     font-size: 15px;
+    min-width: 845px;
 }
 
 ul.right-nav li:hover {
@@ -274,4 +275,8 @@ ul.social li a i:hover{
 
 .instabox .instagram_top h3 {
     color: #000000;
+}
+
+#footer-grid-large {
+    width: 35% !important;
 }
