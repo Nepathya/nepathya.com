@@ -285,3 +285,7 @@ ul.social li a i:hover{
     color: #fff51f;
     list-style: none;
 }
+
+.feedback-form form {
+    margin-top: -15px;
+}
