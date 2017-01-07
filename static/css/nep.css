@@ -285,3 +285,14 @@ ul.social li a i:hover{
     color: #fff51f;
     list-style: none;
 }
+
+
+/*.base css*/
+
+.base {
+    background-color: #000000;
+}
+
+.base section {
+    min-height: 1000px;
+}
