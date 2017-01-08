@@ -376,3 +376,21 @@ ul.social li a i:hover {
     width: 100%;
     height: 50%;
 }
+
+#detail-view .album-detail {
+    margin-bottom: 10px;
+}
+
+.track-list {
+    padding-left: 25px;
+}
+
+/*jPlayer custom CSS*/
+#jquery_jplayer_1 {
+    display: none;
+}
+
+#jp_container_1 {
+    width: 100%;
+    background-color: #333;
+}

@@ -55,6 +55,7 @@ class Track(models.Model):
     released_date = models.DateField(blank=True, null=True)
     label = models.ForeignKey(Label, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+    mp3 = models.FileField(upload_to='tracks', blank=True, null=True)
 
     def __str__(self):
         return self.title
