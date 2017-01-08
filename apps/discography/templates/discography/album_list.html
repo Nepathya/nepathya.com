@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 
 {% block subtitle %}
     Ablums |
@@ -12,10 +13,12 @@
         {% for obj in object_list %}
         <div class="album-wrapper">
             <div class="row">
-                <div class="col-xs-3 col-sm-3 col-md-2 album-img">
-                    <img src="{{ obj.cover_image.url }}" alt=""/>
+                <div class="col-xs-3 col-sm-2 col-md-1 album-img">
+                    {% thumbnail obj.cover_image "500x500" crop="center" as im %}
+                        <img src="{{ im.url }}" alt=""/>
+                    {% endthumbnail %}
                 </div>
-                <div class="col-xs-7 col-sm-7 col-md-8 album-detail">
+                <div class="col-xs-7 col-sm-8 col-md-9 album-detail">
                     <p>
                         {{ obj.title }} <span>| {{ obj.year }}</span>
                     </p>

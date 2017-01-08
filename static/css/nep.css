@@ -324,6 +324,10 @@ ul.social li a i:hover {
     height: 92px;
 }
 
+.album-wrapper .album-detail {
+    padding-left: 25px;
+}
+
 .album-wrapper .album-detail p:first-child {
     font-weight: bold;
     font-size: 20px;
