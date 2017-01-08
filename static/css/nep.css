@@ -328,6 +328,11 @@ ul.social li a i:hover {
     padding-left: 25px;
 }
 
+.album-wrapper .album-detail a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .album-wrapper .album-detail p:first-child {
     font-weight: bold;
     font-size: 20px;
