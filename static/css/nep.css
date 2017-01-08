@@ -293,7 +293,7 @@ ul.social li a i:hover {
 }
 
 .base section {
-    min-height: 800px;
+    min-height: 700px;
     color: #FFFFFF;
 }
 
@@ -362,4 +362,17 @@ ul.social li a i:hover {
 
 .total-tracks-count span {
     vertical-align: text-bottom;
+}
+
+#detail-view .album-img {
+    text-align: center;
+}
+
+#detail-view {
+    height: auto;
+}
+
+#detail-view .album-img img {
+    width: 100%;
+    height: 50%;
 }

@@ -1,6 +1,40 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static thumbnail %}
 
 {% block content %}
-    {{ object }}
+    <div class="container">
+        <div class="album-wrapper" id="detail-view">
+            <div class="row">
+                <div class="col-xs-3 col-sm-2 col-md-5 album-img">
+                    {% thumbnail object.cover_image "1000x1000" crop="center" as im %}
+                        <a href="{% url 'album_detail' object.id %}"><img src="{{ im.url }}" alt=""/></a>
+                    {% endthumbnail %}
+                </div>
+                <div class="col-xs-7 col-sm-8 col-md-7">
+                    <div class=" album-detail">
+                        <a href="{% url 'album_detail' object.id %}">
+                            <p>
+                                {{ object.title }} <span>| {{ object.year }}</span>
+                            </p>
+                        </a>
+                        <p>
+                            <i class="fa fa-calendar-o" aria-hidden="true"></i> <i>Released
+                            date:</i> {{ object.released_date }}
+                        </p>
+
+                        <p>
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i> <i>Label:</i> {{ object.label }}
+                        </p>
+
+                        <p>
+                            <i class="fa fa-music" aria-hidden="true"></i> <i>Genre:</i> {{ object.genre }}
+                        </p>
+                    </div>
+                    <div class="track-list">
+                        {{ object.tracks.all }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
