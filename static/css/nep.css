@@ -382,6 +382,11 @@ ul.social li a i:hover {
     padding-left: 0;
 }
 
+#track-detail h3 {
+    margin-top: 10px ;
+    margin-bottom: 0 ;
+}
+
 .tracks {
     padding: 0;
 }
@@ -402,7 +407,8 @@ ul.social li a i:hover {
 }
 
 #jp_container_1 {
-    width: 100%;
+    width: 94%;
+    margin-left: 14px;
     background-color: #333;
 }
 
@@ -446,6 +452,9 @@ ul.social li a i:hover {
     margin-bottom: 10px;
 }
 
+#track-detail {
+    height: auto;
+}
 /* Diagonal Background Bars */
 .jp-play-bar,
 .jp-volume-bar-value {
@@ -467,6 +476,7 @@ ul.social li a i:hover {
 #jp_container_1 i {
     font-size: 30px;
     margin: 0 4px;
+    cursor: pointer;
 }
 
 .jp-volume-controls {
