@@ -13,7 +13,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-6 album-detail">
                     <a href="{% url 'album_detail' object.id %}">
                         <p>
-                            {{ object.title }} <span>| {{ object.year }}</span>
+                            {{ object.title }} {% if obj.year %} <span>| {{ obj.year }}</span> {% endif %}
                         </p>
                     </a>
 
@@ -36,7 +36,7 @@
                     </p>
 
                 </div>
-
+                {% if object.mp3 %}
                 <div class="tracks col-xs-12 col-sm-6 col-md-5">
                     <div id="jquery_jplayer_1" class="jp-jplayer"></div>
                     <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -92,6 +92,7 @@
                         </div>
                     </div>
                 </div>
+            {% endif %}
             </div>
             <div class="row">
                 <div class="col-sm-12">

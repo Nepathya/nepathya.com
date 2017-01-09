@@ -13,7 +13,7 @@
                         {% thumbnail object.thumbnail "1000x1000" crop="center" as im %}
                             <img src="{{ im.url }}" alt=""/>
                         {% endthumbnail %}
-                        <a href="">
+                        <a href="{% url 'video_detail' object.id %}">
                             <div class="mask">
                                 <div class="info"><i class="fa fa-play" aria-hidden="true"></i></div>
                             </div>

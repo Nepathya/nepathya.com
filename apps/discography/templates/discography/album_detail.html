@@ -16,7 +16,7 @@
                             <div class=" album-detail">
                                 <a href="{% url 'album_detail' object.id %}">
                                     <p>
-                                        {{ object.title }} <span>| {{ object.year }}</span>
+                                        {{ object.title }} {% if obj.year %} <span>| {{ obj.year }}</span> {% endif %}
                                     </p>
                                 </a>
 

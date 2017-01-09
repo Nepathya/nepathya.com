@@ -202,8 +202,8 @@ ul.nav li a {
 .footer {
     /*-webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);*/
     /*clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);*/
-
-    background: rgba(0, 0, 0, .7)
+    background: rgba(0, 0, 0, .7);
+    margin-top: 40px;
 }
 
 .copy {
@@ -300,6 +300,11 @@ ul.social li a i:hover {
 .base section .h2 {
     font-family: 'Raleway', 'sans-serif';
     text-align: left;
+}
+
+.base section .h2 small {
+    font-size: 44%;
+    color: #FFFFFF;
 }
 
 .base section hr {
@@ -495,6 +500,17 @@ ul.social li a i:hover {
 .video-list:not(.h2) {
     text-align: center;
 }
+
+.video-detail iframe {
+    border: 0;
+    width: 100%;
+    height: 515px;
+}
+
+.video-description {
+    margin-top: 20px;
+}
+
 /*jPlayer custom CSS*/
 #jquery_jplayer_1 {
     display: none;
