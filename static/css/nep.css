@@ -312,7 +312,7 @@ ul.social li a i:hover {
     background-color: rgba(51, 51, 51, .2);
     padding: 7px;
     border: 2px solid #333333;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
 }
 
 .album-wrapper:hover {
@@ -379,10 +379,7 @@ ul.social li a i:hover {
 
 #detail-view .album-detail {
     margin-bottom: 10px;
-}
-
-.track-list {
-    padding-left: 25px;
+    padding-left: 0;
 }
 
 /*jPlayer custom CSS*/
@@ -393,4 +390,104 @@ ul.social li a i:hover {
 #jp_container_1 {
     width: 100%;
     background-color: #333;
+}
+
+.jp-progress {
+    background: #262929;
+    border: 1px solid;
+    border-color: #212424 #262929 #262929;
+    border-radius: 1px;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.05);
+    height: 0.4375em;
+    width: 100%;
+}
+
+.jp-type-single {
+    padding: 10px
+}
+
+.jp-volume-bar {
+    /*float: left;*/
+    z-index: 99;
+    top: 12px;
+    left: -38px;
+    position: relative;
+    /*margin: 0.75em 0 0 -0.3125em;*/
+    width: 4.5em;
+    /*height: 0.4375em;*/
+    cursor: pointer;
+    background: #262929;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.05);
+    border-radius: 1px;
+}
+
+.jp-volume-bar-value {
+    width: 0px;
+    height: 0.3125em;
+    margin: 1px;
+    border-radius: 1px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+/* Diagonal Background Bars */
+.jp-play-bar,
+.jp-volume-bar-value {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    background-size: 0.4375em 0.4375em;
+    background-color: #fcc500;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#fff200), to(#fcc500));
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff200), color-stop(100%, #fcc500));
+    background-image: -webkit-linear-gradient(#fff200, #fcc500);
+    background-image: -o-linear-gradient(#fff200, #fcc500);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff200', endColorstr='#fcc500', GradientType=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff200', endColorstr='#fcc500', GradientType=0)";
+    background-image: linear-gradient(#fff200, #fcc500);
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
+}
+
+#jp_container_1 i {
+    font-size: 30px;
+    margin: 0 4px;
+}
+
+.jp-volume-controls {
+    float: right;
+    position: relative;
+}
+
+.jp-volume-controls .jp-volume-max {
+    position: absolute;
+    top: 0px;
+    left: 35px;
+}
+
+.jp-volume-controls .jp-mute {
+    position: absolute;
+    top: 0px;
+    left: -60px;
+}
+
+.jp-playlist {
+    background-color: #262929;
+    padding-bottom: 7px;
+}
+
+.jp-playlist ul {
+    list-style: none;
+}
+
+.jp-playlist ul li {
+    padding: 2px;
+    margin-top: 4px;
+    border-bottom: 1px solid rgb(51, 51, 51)
+}
+
+.jp-playlist ul li a {
+    color: #FFFFFF;
+    text-decoration: none ;
 }
