@@ -382,6 +382,20 @@ ul.social li a i:hover {
     padding-left: 0;
 }
 
+.tracks {
+    padding: 0;
+}
+
+.tracks a li {
+    color: #FFFFFF;
+    list-style: none;
+    text-decoration: none;
+    padding: 2px;
+    margin-top: 4px;
+    border-bottom: 1px solid rgba(255, 245, 31, .4);
+    font-family: 'Raleway', 'sans-serif';
+}
+
 /*jPlayer custom CSS*/
 #jquery_jplayer_1 {
     display: none;
@@ -489,5 +503,5 @@ ul.social li a i:hover {
 
 .jp-playlist ul li a {
     color: #FFFFFF;
-    text-decoration: none ;
+    text-decoration: none;
 }
