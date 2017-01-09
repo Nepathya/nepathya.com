@@ -108,7 +108,7 @@
 {#                            </div>#}
                             <ul class="tracks">
                                 {% for obj in object.tracks.all %}
-                                    <a href="#">
+                                    <a href="{% url 'track_detail' obj.id %}">
                                         <li><i class="fa fa-headphones"></i> {{ obj.title }}</li>
                                     </a>
                                 {% endfor %}
