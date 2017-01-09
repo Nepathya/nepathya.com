@@ -1,5 +1,32 @@
-{% extends "_base.html" %}
+{% extends "base.html" %}
+{% load static thumbnail %}
 
 {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 video-list">
+                <h2 class="h2">Videos</h2>
+                <hr/>
+                {% for object in object_list %}
+                <div class="video-wrapper">
+                    <div class="video-image">
+                        {% thumbnail object.thumbnail "1000x1000" crop="center" as im %}
+                            <img src="{{ im.url }}" alt=""/>
+                        {% endthumbnail %}
+                        <a href="">
+                            <div class="mask">
+                                <div class="info"><i class="fa fa-play" aria-hidden="true"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="video-info">
+                        {{ object.title }}
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
