@@ -1,11 +1,46 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 
 {% block content %}
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                {{ object_list }}
+        {% for object in object_list %}
+        <div class="row events">
+            <div class="col-xs-12 col-sm-2 text-center">
+                {% thumbnail object.image "500x500" crop="center" as im %}
+                    <a href="#"><img src="{{ im.url }}" alt=""/></a>
+                {% endthumbnail %}
+            </div>
+            <div class="col-xs-12 col-sm-10">
+                <div class="events-detail">
+                    <p class="title">
+                        {{ object.name }}
+                    </p>
+
+                    <p>
+                        <i class="fa fa-calendar"></i> {{ object.datetime }}
+                    </p>
+
+                    <p>
+                        <i class="fa fa-dollar"></i> {{ object.entry_fee }}
+                    </p>
+
+                    <p>
+                        <i class="fa fa-map-marker"></i> {{ object.venue }}
+                    </p>
+
+                    <p><i class="fa fa-ticket"></i> Ticket available at:</p>
+
+                    <div class="ticket-location">
+                        <p>
+                            {% for ticket_location in object.ticket_location.all %}
+                                <span>{{ ticket_location.ticket_location }}</span>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+        <hr/>
+    {% endfor %}
     </div>
 {% endblock %}
