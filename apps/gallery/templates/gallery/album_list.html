@@ -22,7 +22,7 @@
                             {% thumbnail object.get_thumbnail "1000x1000" crop="center" as im %}
                                 <img src="{{ im.url }}" alt=""/>
                             {% endthumbnail %}
-                            <a href="{% url 'album_detail' object.slug %}">
+                            <a href="{% url 'gallery_album_detail' object.slug %}">
                                 <div class="mask">
                                     <div class="info"><i class="fa fa-photo" aria-hidden="true"></i></div>
                                 </div>

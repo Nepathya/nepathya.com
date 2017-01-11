@@ -6,9 +6,9 @@
             <a href="/"><img src="{% static 'img/logo.png' %}" alt=""/></a>
         </div>
         <ul class="right-nav">
-            <a href="#">
-                <li>About Band</li>
-            </a>
+{#            <a href="#">#}
+{#                <li>About Band</li>#}
+{#            </a>#}
             <a href="{% url 'album_list' %}">
                 <li>Music</li>
             </a>
@@ -18,7 +18,7 @@
             <a href="{% url 'events_list' %}">
                 <li>Events</li>
             </a>
-            <a href="#">
+            <a href="{% url 'gallery_album_list' %}">
                 <li>Gallery</li>
             </a>
             <a href="#">

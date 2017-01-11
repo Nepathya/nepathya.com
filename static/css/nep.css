@@ -204,6 +204,7 @@ ul.nav li a {
     /*clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);*/
     background: rgba(0, 0, 0, .7);
     margin-top: 40px;
+    color: #FFFFFF;
 }
 
 .copy {

@@ -5,8 +5,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from . import api
 
 web_urls = [
-    url(r'^$', views.AlbumList.as_view(), name='album_list'),
-    url(r'^(?P<slug>[\w-]+)/', views.AlbumDetail.as_view(), name='album_detail'),
+    url(r'^$', views.AlbumList.as_view(), name='gallery_album_list'),
+    url(r'^(?P<slug>[\w-]+)/', views.AlbumDetail.as_view(), name='gallery_album_detail'),
 ]
 
 api_urls = [
