@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load staticfiles thumbnail %}
+
+{% block title %}
+    {{ album_name|lower }}
+{% endblock %}
+
+{% block end_head %}
+    <link href="{% static "gallery/gallery.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "colorbox/colorbox.css" %}" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 outer-list">
+                <h2 class="h2">{{ object.name }}</h2>
+                <hr/>
+                {% for obj in object.images.all %}
+                    <div class="outer-wrapper">
+                        <div class="inner-image-content" id="album-mask">
+                            {% thumbnail obj.file "1000x1000" crop="center" as im %}
+                                <img src="{{ im.url }}" alt=""/>
+                            {% endthumbnail %}
+                            <a class="gallery" href="{{ obj.file.url }}"  title="{{ obj.name }}">
+                                <div class="mask">
+                                    <div class="info"><i class="fa fa-photo" aria-hidden="true"></i></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="inner-info">
+                            {{ obj.name }}
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        {% if object.description %}
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="album-description">
+                        {{ object.description }}
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block end_body %}
+    <script src="{% static "colorbox/jquery.colorbox-min.js" %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('a.gallery').colorbox({rel:"group1", opacity:.8, maxWidth:'95%', maxHeight:'95%', arrow_key: 'true'});
+        });
+    </script>
+{% endblock %}

@@ -491,13 +491,18 @@ ul.social li a i:hover {
     font-weight: bold;
 }
 
+#album-mask .mask .info i {
+     margin-left: 0;
+    font-size: 16px;
+}
+
 .outer-wrapper:hover .inner-image-content .mask {
     opacity: 1;
     background-color: #fff51f;
     color: #000000;
 }
 
-.video-list:not(.h2) {
+.outer-list:not(.h2) {
     text-align: center;
 }
 
@@ -507,7 +512,7 @@ ul.social li a i:hover {
     height: 515px;
 }
 
-.video-description {
+.video-description, .album-description {
     margin-top: 20px;
 }
 
