@@ -8,8 +8,8 @@
                 <h2 class="h2">Videos</h2>
                 <hr/>
                 {% for object in object_list %}
-                <div class="video-wrapper">
-                    <div class="video-image">
+                <div class="outer-wrapper">
+                    <div class="inner-image-content">
                         {% thumbnail object.thumbnail "1000x1000" crop="center" as im %}
                             <img src="{{ im.url }}" alt=""/>
                         {% endthumbnail %}
@@ -19,7 +19,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="video-info">
+                    <div class="inner-info">
                         {{ object.title }}
                     </div>
                 </div>

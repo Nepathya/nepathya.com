@@ -431,7 +431,7 @@ ul.social li a i:hover {
 
 
 /*Video css*/
-.video-wrapper {
+.outer-wrapper {
     background-color: rgba(51, 51, 51, .2);
     width: 250px;
     height: 285px;
@@ -440,13 +440,13 @@ ul.social li a i:hover {
     margin: 5px 15px;
 }
 
-.video-wrapper .video-image {
+.outer-wrapper .inner-image-content {
     position: relative;
     width: 100%;
     height: 82%;
 }
 
-.video-wrapper .video-info {
+.outer-wrapper .inner-info {
     width: 100%;
     height: 18%;
     background-color: #333333;
@@ -456,21 +456,21 @@ ul.social li a i:hover {
     padding: 15px;
 }
 
-.video-wrapper:hover .video-image img {
+.outer-wrapper:hover .inner-image-content img {
     opacity: .2;
 }
 
-.video-wrapper:hover .video-info {
+.outer-wrapper:hover .inner-info {
     background-color: #fff51f;
     color: #000000;
 }
 
-.video-wrapper .video-image img {
+.outer-wrapper .inner-image-content img {
     width: 100%;
     height: 100%;
 }
 
-.video-image .mask {
+.inner-image-content .mask {
     top: 65%;
     left: 50%;
     transform: translate(-50%, -120%);
@@ -491,7 +491,7 @@ ul.social li a i:hover {
     font-weight: bold;
 }
 
-.video-wrapper:hover .video-image .mask {
+.outer-wrapper:hover .inner-image-content .mask {
     opacity: 1;
     background-color: #fff51f;
     color: #000000;
