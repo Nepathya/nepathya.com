@@ -296,6 +296,7 @@ ul.social li a i:hover {
 .base section {
     min-height: 700px;
     color: #FFFFFF;
+    padding-bottom: 25px;
 }
 
 .base section .h2 {
