@@ -1,4 +1,4 @@
-{% extends "_base.html" %}
+{% extends "base.html" %}
 
 {% block end_head %}
 
@@ -6,12 +6,28 @@
 
 
 {% block content %}
-{% for obj in object_list %}
-	{{ obj }}
-{% endfor %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% for obj in object_list %}
+                    <a href="{% url 'news_detail' obj.id %}">
+                        <h1 class="yellow">{{ obj.title }}
+                            <br/>
+                            <small>
+                                / <i>source: </i>{{ obj.source }}
+                                / <i class="fa fa-calendar"></i> {{ obj.date }}
+                            </small>
+                        </h1>
+                    </a>
+                    <hr/>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
 
 {% block footer %}
-{{ block.super }}
+    {{ block.super }}
 
 {% endblock %}

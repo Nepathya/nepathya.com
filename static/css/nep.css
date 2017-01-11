@@ -303,7 +303,7 @@ ul.social li a i:hover {
     text-align: left;
 }
 
-.base section .h2 small {
+.base section .h2 small, .base section h1 small {
     font-size: 44%;
     color: #FFFFFF;
 }
@@ -514,8 +514,16 @@ ul.social li a i:hover {
     height: 515px;
 }
 
-.video-description, .album-description {
+.video-description, .album-description, .description {
     margin-top: 20px;
+}
+
+.yellow {
+    color: #fff51f
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /*jPlayer custom CSS*/
@@ -571,6 +579,14 @@ ul.social li a i:hover {
 
 #track-detail {
     height: auto;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.image img {
+    width: 100%;
 }
 
 /* Diagonal Background Bars */
