@@ -1,111 +1,77 @@
 {% extends "_base.html" %}
-{% load staticfiles i18n %}
+{% load staticfiles i18n thumbnail %}
 
 {% block title %}
     {% trans 'Nepathya' %}
 {% endblock %}
 
 {% block content %}
+    <div class="main">
+        <div class="content_box">
+            <div class="container latest-vid">
+                <div class="row">
+                    <h3 class="m_2">Latest Videos</h3>
 
-<div class="main">
-      <div class="content_box">
-        <div class="container latest-vid">
-            <div class="row">
+                    <div class="col-sm-12 outer-list">
+                        {% for object in video_object_list %}
+                            <div class="outer-wrapper">
+                                <div class="inner-image-content">
+                                    {% thumbnail object.thumbnail "1000x1000" crop="center" as im %}
+                                        <img src="{{ im.url }}" alt=""/>
+                                    {% endthumbnail %}
+                                    <a href="{% url 'video_detail' object.id %}">
+                                        <div class="mask">
+                                            <div class="info"><i class="fa fa-play" aria-hidden="true"></i></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="inner-info">
+                                    {{ object.title }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="clearfix"></div>
+                    </div>
 
-
-                <h3 class="m_2">Latest Videos</h3>
-               <div class="content_grid">
-                    <div class="col_1_of_3 span_1_of_3">
-                     <div class="view view-first">
-                          <a href="single.html">
-                           <div class="inner_content clearfix">
-                            <div class="product_image">
-                                <img src="{% static 'img/vid1.png' %}" class="img-responsive" alt=""/>
-                                <div class="mask">
-                                    <div class="info"><i class="fa fa-play" aria-hidden="true"></i></div>
-                                  </div>
-                                <div class="product_container">
-                                   <div class="cart-left">
-                                     <p class="title">Mainache Cham Chami</p>
-                                   </div>
-                                   <div class="clearfix"></div>
-                                 </div>
-                            </div>
-                           </div>
-                         </a>
-                       </div>
-                    </div>
-                    <div class="col_1_of_3 span_1_of_3">
-                     <div class="view view-first">
-                          <a href="single.html">
-                           <div class="inner_content clearfix">
-                            <div class="product_image">
-                                <img src="{% static 'img/vid2.png' %}" class="img-responsive" alt=""/>
-                                <div class="mask">
-                                    <div class="info"><i class="fa fa-play" aria-hidden="true"></i></div>
-                                  </div>
-                                <div class="product_container">
-                                   <div class="cart-left">
-                                     <p class="title">Mero Hajur</p>
-                                   </div>
-                                   <div class="clearfix"></div>
-                                 </div>
-                            </div>
-                           </div>
-                         </a>
-                       </div>
-                    </div>
-                    <div class="col_1_of_3 span_1_of_3">
-                     <div class="view view-first">
-                          <a href="single.html">
-                           <div class="inner_content clearfix">
-                            <div class="product_image">
-                                <img src="{% static 'img/vid3.png' %}" class="img-responsive" alt=""/>
-                                <div class="mask">
-                                    <div class="info"><i class="fa fa-play" aria-hidden="true"></i></div>
-                                  </div>
-                                <div class="product_container">
-                                   <div class="cart-left">
-                                     <p class="title">Resham</p>
-                                   </div>
-                                   <div class="clearfix"></div>
-                                 </div>
-                            </div>
-                           </div>
-                         </a>
-                       </div>
-                    </div>
-                   <div class="clearfix"></div>
                 </div>
-              </div>
             </div>
-         </div>
         </div>
+    </div>
 
-
-        <div class="container instabox">
-          <div class="instagram_top">
-            <div class="instagram text-center">
-                <h3><i class="fa fa-instagram" aria-hidden="true"></i>instagram:&nbsp;<span class="small">#nepathya</span></h3>
-            </div>
-            <ul class="instagram_grid">
-              <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i1.jpg' %}" class="img-responsive"alt=""/></a></li>
-              <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i2.jpg' %}" class="img-responsive" alt=""/></a></li>
-              <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i3.jpg' %}" class="img-responsive" alt=""/></a></li>
-              <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i4.jpg' %}" class="img-responsive" alt=""/></a></li>
-              <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i5.jpg' %}" class="img-responsive" alt=""/></a></li>
-              <li class="last_instagram"><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i6.jpg' %}" class="img-responsive" alt=""/></a></li>
-              <div class="clearfix"></div>
-              <div id="small-dialog1" class="mfp-hide">
-                <div class="pop_up">
-                    <h4>A Sample Photo Stream</h4>
-                    <img src="images/i_zoom.jpg" class="img-responsive" alt=""/>
+    <div class="instabox">
+        <div class="container">
+            <div class="instagram_top">
+                <div class="instagram text-center">
+                    <h3>Nepathya Instagram</h3>
                 </div>
-              </div>
-            </ul>
-          </div>
+                <ul class="instagram_grid">
+                    <iframe src="//users.instush.com/collage/?cols=11&rows=7&sl=true&user_id=2860198090&username=roshanshrestha01&sid=-1&susername=-1&tag=-1&stype=mine&bg=transparent&space=true&rd=false&grd=false&gpd=6&drp=false&pin=true&t=999999vMLdqhTpVo-JMJ41AZGOeWxCUt4OPmBkmaIXrmKfZE1QtoXuWFVUVyTwOshX5OtDB5pQ2ZRxGao"
+                            allowtransparency="true" frameborder="0" scrolling="no"
+                            style="display:block;width:1145px;height:733px;border:none;overflow:visible;"></iframe>
+                    {#                <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i1.jpg' %}"#}
+                    {#                                                                               class="img-responsive" alt=""/></a></li>#}
+                    {#                <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i2.jpg' %}"#}
+                    {#                                                                               class="img-responsive" alt=""/></a></li>#}
+                    {#                <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i3.jpg' %}"#}
+                    {#                                                                               class="img-responsive" alt=""/></a></li>#}
+                    {#                <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i4.jpg' %}"#}
+                    {#                                                                               class="img-responsive" alt=""/></a></li>#}
+                    {#                <li><a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'img/i5.jpg' %}"#}
+                    {#                                                                               class="img-responsive" alt=""/></a></li>#}
+                    {#                <li class="last_instagram"><a class="popup-with-zoom-anim" href="#small-dialog1"><img#}
+                    {#                        src="{% static 'img/i6.jpg' %}" class="img-responsive" alt=""/></a></li>#}
+                    <div class="clearfix"></div>
+                    <div id="small-dialog1" class="mfp-hide">
+                        <div class="pop_up">
+                            <h4>A Sample Photo Stream</h4>
+                            <img src="images/i_zoom.jpg" class="img-responsive" alt=""/>
+                        </div>
+                    </div>
+                </ul>
+            </div>
 
         </div>
-     </div>
+    </div>
+
 
 {% endblock %}

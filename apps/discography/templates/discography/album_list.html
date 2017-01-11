@@ -1,6 +1,52 @@
-{% extends "_base.html" %}
+{% extends "base.html" %}
+{% load thumbnail %}
+
+{% block subtitle %}
+    Ablums |
+{% endblock %}
 
 {% block content %}
-    {{ object_list }}
+    <div class="container">
+        <h2 class="h2">Ablums</h2>
+        <hr/>
 
+        {% for obj in object_list %}
+            <div class="album-wrapper">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2 col-md-1 album-img">
+                        {% thumbnail obj.cover_image "500x500" crop="center" as im %}
+                            <a href="{% url 'album_detail' obj.id %}"><img src="{{ im.url }}" alt=""/></a>
+                        {% endthumbnail %}
+                    </div>
+                    <div class="col-xs-7 col-sm-8 col-md-9 album-detail">
+                        <a href="{% url 'album_detail' obj.id %}">
+                            <p>
+                                {{ obj.title }} {% if obj.year %} <span>| {{ obj.year }}</span> {% endif %}
+                            </p>
+                        </a>
+
+                        <p>
+                            <i class="fa fa-calendar-o" aria-hidden="true"></i> <i>Released
+                            date:</i> {{ obj.released_date }}
+                        </p>
+
+                        <p>
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i> <i>Label:</i> {{ obj.label }}
+                        </p>
+
+                        <p>
+                            <i class="fa fa-music" aria-hidden="true"></i> <i>Genre:</i> {{ obj.genre }}
+                        </p>
+                    </div>
+                    <div class="tracks col-xs-2 col-sm-2 col-md-2">
+                        <p>Tracks</p>
+
+                        <div class="total-tracks-count">
+                            <span>{{ obj.tracks.all.count }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

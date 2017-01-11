@@ -4,6 +4,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from . import api, views
 
 web_urls = [
+    url(r'^list/$', views.EventList.as_view(), name="events_list"),
+
 ]
 
 api_urls = [

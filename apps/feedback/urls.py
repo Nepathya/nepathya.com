@@ -5,6 +5,8 @@ from . import api
 from . import views
 
 web_urls = [
+    url(r'^feedbacks/$', views.save_feedback, name='save_feedback'),
+
 ]
 
 api_urls = [

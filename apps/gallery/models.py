@@ -91,7 +91,7 @@ class Album(models.Model):
         if self.thumbnail:
             return self.thumbnail
         try:
-            return self.images.all()[0]
+            return self.images.all()[0].file
         except IndexError:
             return None
 

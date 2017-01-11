@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load staticfiles i18n thumbnail %}
+
+{% block title %}
+    {% trans 'Gallery' %}
+{% endblock %}
+
+
+{% block extrahead %}
+    <link href="{% static "gallery/gallery.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 outer-list">
+                <h2 class="h2">Gallery</h2>
+                <hr/>
+                {% for object in object_list %}
+                    <div class="outer-wrapper">
+                        <div class="inner-image-content" id="album-mask">
+                            {% thumbnail object.get_thumbnail "1000x1000" crop="center" as im %}
+                                <img src="{{ im.url }}" alt=""/>
+                            {% endthumbnail %}
+                            <a href="{% url 'gallery_album_detail' object.slug %}">
+                                <div class="mask">
+                                    <div class="info"><i class="fa fa-photo" aria-hidden="true"></i></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="inner-info">
+                            {{ object.name }}
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

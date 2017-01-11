@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>{% block title %}{% block subtitle %} {% endblock %} Nepathya {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css'/>
+    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css'/>
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="{% static 'css/nep.css' %}" rel="stylesheet" type="text/css">
+    <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet'
+          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet'
+          type='text/css'>
+
+    {% block end_head %}
+    {% endblock %}
+</head>
+<body class="{% block body_class %}base{% endblock %}">
+
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% include 'partials/_header.html' %}
+
+<section>
+    {% block content %}
+    {% endblock %}
+</section>
+
+{% block footer %}
+    {% include 'partials/_footer.html' %}
+{% endblock %}
+
+<script src="{% static 'js/libs/jquery.min.js' %}"></script>
+
+<script src="{% static 'js/base.js' %}"></script>
+<script type="text/javascript">
+    $(".messages").delay(3000).slideUp(300);
+</script>
+{% block end_body %}
+{% endblock %}
+</body>
+</html>

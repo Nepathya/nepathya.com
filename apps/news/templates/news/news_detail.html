@@ -1,5 +1,24 @@
-{% extends "_base.html" %}
+{% extends "base.html" %}
+{% load thumbnail %}
 
 {% block content %}
-
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="image">
+                    <h1 class="yellow">{{ object.title }}
+                        <br/>
+                        <small><i class="fa fa-calendar-o"></i> {{ object.date }}</small>
+                    </h1>
+                    <hr/>
+                    {% thumbnail object.image "1000x1000" as im %}
+                        <img src="{{ im.url }}" alt=""/>
+                    {% endthumbnail %}
+                    <p class="description">{{ object.content }}</p>
+                    <br/>
+                    <p class="bold"><i>source: </i>{{ object.source }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

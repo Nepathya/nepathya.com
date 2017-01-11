@@ -1,5 +1,59 @@
-{% extends "_base.html" %}
+{% extends "base.html" %}
+{% load static thumbnail %}
 
 {% block content %}
-{{ object }}
+    <div class="container">
+        <div class="album-wrapper" id="detail-view">
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-5 album-img">
+                    {% thumbnail object.cover_image "1000x1000" crop="center" as im %}
+                        <a href="{% url 'album_detail' object.id %}"><img src="{{ im.url }}" alt=""/></a>
+                    {% endthumbnail %}
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-7">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class=" album-detail">
+                                <a href="{% url 'album_detail' object.id %}">
+                                    <p>
+                                        {{ object.title }} {% if obj.year %} <span>| {{ obj.year }}</span> {% endif %}
+                                    </p>
+                                </a>
+
+                                <p>
+                                    <i class="fa fa-calendar-o" aria-hidden="true"></i> <i>Released
+                                    date:</i> {{ object.released_date }}
+                                </p>
+
+                                <p>
+                                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                    <i>Label:</i> {{ object.label }}
+                                </p>
+
+                                <p>
+                                    <i class="fa fa-music" aria-hidden="true"></i> <i>Genre:</i> {{ object.genre }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+{#                            <div class="track-list">#}
+                                <h3>Tracks</h3>
+{##}
+                            <ul class="tracks">
+                                {% for obj in object.tracks.all %}
+                                    <a href="{% url 'track_detail' obj.id %}">
+                                        <li><i class="fa fa-headphones"></i> {{ obj.title }}</li>
+                                    </a>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
+

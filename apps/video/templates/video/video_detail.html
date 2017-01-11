@@ -1,5 +1,22 @@
-{% extends "_base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-zd
+    <div class="container">
+        <div class="row video-detail">
+            <div class="col-sm-12">
+                <h2 class="h2">{{ object.title }}
+                    {% if object.release_date %}
+                        <small>| <i class="fa fa-calendar-o"></i> {{ object.release_date }} |</small>
+                    {% endif %}
+                </h2>
+                <hr/>
+                {% if object.youtube_id %}
+                    <iframe src="https://www.youtube.com/embed/" + {{ object.youtube_id }}></iframe>
+                {% endif %}
+                <p class="video-description">
+                    {{ object.description }}
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -26,7 +26,7 @@ class Event(models.Model):
     entry_fee = models.DecimalField(max_digits=10, decimal_places=2)
     ticket_location = models.ManyToManyField(TicketLocation, blank=True)
     description = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to='events/')
 
     def __str__(self):
         return self.name + ':' + self.venue.name
