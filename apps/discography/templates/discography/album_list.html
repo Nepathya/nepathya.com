@@ -29,24 +29,73 @@
                             <i class="fa fa-calendar-o" aria-hidden="true"></i> <i>Released
                             date:</i> {{ obj.released_date }}
                         </p>
-
-                        <p>
-                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i> <i>Label:</i> {{ obj.label }}
-                        </p>
-
-                        <p>
-                            <i class="fa fa-music" aria-hidden="true"></i> <i>Genre:</i> {{ obj.genre }}
-                        </p>
+                        {% if obj.label %}
+                            <p>
+                                <i class="fa fa-dot-circle-o" aria-hidden="true"></i> <i>Label:</i> {{ obj.label }}
+                            </p>
+                        {% endif %}
+                        {% if obj.genre %}
+                            <p>
+                                <i class="fa fa-music" aria-hidden="true"></i> <i>Genre:</i> {{ obj.genre }}
+                            </p>
+                        {% endif %}
                     </div>
-                    <div class="tracks col-xs-2 col-sm-2 col-md-2">
-                        <p>Tracks</p>
 
-                        <div class="total-tracks-count">
-                            <span>{{ obj.tracks.all.count }}</span>
-                        </div>
+                    <div class="tracks col-xs-2 col-sm-2 col-md-2">
+                        {% for music_store in obj.album_music_store.all %}
+                            <div class="total-tracks-count">
+                                <a href="{{ music_store.url }}"><i class="fa {{ music_store.social_icon.font_awesome_class }}"></i></a>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         {% endfor %}
+
+        {% if single_tracks %}
+            <h2 class="h2">Single Tracks</h2>
+            <hr/>
+
+            {% for obj in single_tracks %}
+                <div class="album-wrapper">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-2 col-md-1 album-img">
+                            {% thumbnail obj.cover_image "500x500" crop="center" as im %}
+                                <a href="{% url 'album_detail' obj.id %}"><img src="{{ im.url }}" alt=""/></a>
+                            {% endthumbnail %}
+                        </div>
+                        <div class="col-xs-7 col-sm-8 col-md-9 album-detail">
+                            <a href="{% url 'album_detail' obj.id %}">
+                                <p>
+                                    {{ obj.title }} {% if obj.year %} <span>| {{ obj.year }}</span> {% endif %}
+                                </p>
+                            </a>
+
+                            <p>
+                                <i class="fa fa-calendar-o" aria-hidden="true"></i> <i>Released
+                                date:</i> {{ obj.released_date }}
+                            </p>
+                            {% if obj.label %}
+                                <p>
+                                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i> <i>Label:</i> {{ obj.label }}
+                                </p>
+                            {% endif %}
+                            {% if obj.genre %}
+                                <p>
+                                    <i class="fa fa-music" aria-hidden="true"></i> <i>Genre:</i> {{ obj.genre }}
+                                </p>
+                            {% endif %}
+                        </div>
+                        <div class="tracks col-xs-2 col-sm-2 col-md-2">
+                            {% for music_store in obj.track_music_store.all %}
+                                <div class="total-tracks-count">
+                                    <a href="{{ music_store.url }}"><i class="fa {{ music_store.social_icon.font_awesome_class }}"></i></a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
 {% endblock %}

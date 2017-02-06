@@ -30,14 +30,12 @@ class Album(models.Model):
         return self.title
 
 
-class MusicStore(models.Model):
-    name = models.CharField(max_length=250)
-    icon = models.ImageField()
-    url = models.URLField()
-    album = models.ForeignKey(Album, related_name="music_store")
+class SocialIcon(models.Model):
+    name = models.CharField(max_length=100)
+    font_awesome_class = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name + '| ' + str(self.url)
+        return self.name
 
 
 class Track(models.Model):
@@ -59,3 +57,15 @@ class Track(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class MusicStore(models.Model):
+    icon = models.ImageField(blank=True, null=True)
+    social_icon = models.ForeignKey(SocialIcon, blank=True, null=True)
+    url = models.URLField()
+    album = models.ForeignKey(Album, related_name="album_music_store", blank=True, null=True)
+    track = models.ForeignKey(Track, related_name="track_music_store", blank=True, null=True)
+
+    def __str__(self):
+        title = self.album.title if self.album else self.track.title or ''
+        return title + '| ' + str(self.url)

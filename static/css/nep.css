@@ -353,17 +353,26 @@ ul.social li a i:hover {
 }
 
 .total-tracks-count {
+    display: inline-block;
     text-align: center;
-    font-size: 40px;
+    font-size: 34px;
     border: 1px solid #333;
-    border-radius: 50%;
-    width: 62px;
-    margin: auto;
+    border-radius: 109%;
+    width: 59px;
+    margin: 20px auto;
     background: #333;
     line-height: 55px;
 }
 
-.album-wrapper:hover .total-tracks-count {
+.total-tracks-count a {
+    color: #FFFFFF;
+}
+
+.total-tracks-count:hover a {
+    color: #000;
+} 
+
+.total-tracks-count:hover{
     background-color: #fff51f;
     color: #000;
 }

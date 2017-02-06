@@ -13,6 +13,12 @@ def index(request):
 class AlbumList(generic.ListView):
     model = Album
 
+    def get_context_data(self, **kwargs):
+        context = super(AlbumList, self).get_context_data(**kwargs)
+        single_tracks = Track.objects.filter(album__isnull=True)
+        context['single_tracks'] = single_tracks
+        return context
+
 
 class AlbumDetail(generic.DetailView):
     model = Album
