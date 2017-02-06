@@ -6,7 +6,7 @@ from . import api
 
 web_urls = [
     url(r'^$', views.AlbumList.as_view(), name='gallery_album_list'),
-    url(r'^(?P<slug>[\w-]+)/', views.AlbumDetail.as_view(), name='gallery_album_detail'),
+    url(r'^(?P<slug>[\w-]+)/$', views.AlbumDetail.as_view(), name='gallery_album_detail'),
 ]
 
 api_urls = [
@@ -18,3 +18,4 @@ api_urls = [
 api_urls = format_suffix_patterns(api_urls)
 
 urlpatterns = web_urls + api_urls
+
