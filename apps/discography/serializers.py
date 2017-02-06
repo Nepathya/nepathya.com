@@ -28,7 +28,7 @@ class MusicStoreSerializer(serializers.ModelSerializer):
 
 class AlbumSerializer(serializers.ModelSerializer):
     tracks = TrackSerializer(many=True)
-    music_store = MusicStoreSerializer(many=True)
+    album_music_store = MusicStoreSerializer(many=True)
 
     class Meta:
         model = Album
