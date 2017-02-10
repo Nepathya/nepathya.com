@@ -1,52 +1,50 @@
 {% load static %}
-<div class="container">
 
-    <div class="header-top">
-        <div class="logo">
-            <a href="/"><img src="{% static 'img/logo.png' %}" alt=""/></a>
-        </div>
-        <ul class="right-nav">
-{#            <a href="#">#}
-{#                <li>About Band</li>#}
-{#            </a>#}
-            <a href="{% url 'album_list' %}">
-                <li>Music</li>
-            </a>
-            <a href="{% url 'video_list' %}">
-                <li>Videos</li>
-            </a>
-            <a href="{% url 'events_list' %}">
-                <li>Events</li>
-            </a>
-            <a href="{% url 'gallery_album_list' %}">
-                <li>Gallery</li>
-            </a>
-            <a href="{% url 'news_list' %}">
-                <li>News</li>
-            </a>
-{#            <a href="#">#}
-{#                <li>Contact</li>#}
-{#            </a>#}
+<div class="header-top">
+    <div class="logo">
+        <a href="/"><img src="{% static 'img/logo.png' %}" alt=""/></a>
+    </div>
+    <ul class="right-nav">
+        {#            <a href="#">#}
+        {#                <li>About Band</li>#}
+        {#            </a>#}
+        <a href="{% url 'album_list' %}">
+            <li>Music</li>
+        </a>
+        <a href="{% url 'video_list' %}">
+            <li>Videos</li>
+        </a>
+        <a href="{% url 'events_list' %}">
+            <li>Events</li>
+        </a>
+        <a href="{% url 'gallery_album_list' %}">
+            <li>Gallery</li>
+        </a>
+        <a href="{% url 'news_list' %}">
+            <li>News</li>
+        </a>
+        {#            <a href="#">#}
+        {#                <li>Contact</li>#}
+        {#            </a>#}
+    </ul>
+
+    <div class="header_right">
+        <ul class="social">
+            <li><a href=""><i class="fb"> </i> </a></li>
+            <li><a href=""><i class="tw"> </i> </a></li>
+            <li><a href=""><i class="utube"> </i> </a></li>
+            <li><a href=""><i class="pin"> </i> </a></li>
+            <li><a href=""><i class="instagram"> </i> </a></li>
         </ul>
-
-        <div class="header_right">
-            <ul class="social">
-                <li><a href=""><i class="fb"> </i> </a></li>
-                <li><a href=""><i class="tw"> </i> </a></li>
-                <li><a href=""><i class="utube"> </i> </a></li>
-                <li><a href=""><i class="pin"> </i> </a></li>
-                <li><a href=""><i class="instagram"> </i> </a></li>
-            </ul>
-            <div class="lang_list">
-                {#              <select tabindex="4" class="dropdown">#}
-                {#                <option value="" class="label" value="">En</option>#}
-                {#                <option value="1">English</option>#}
-                {#                <option value="2">Nepali</option>#}
-                {##}
-                {#              </select>#}
-            </div>
-            <div class="clearfix"></div>
+        <div class="lang_list">
+            {#              <select tabindex="4" class="dropdown">#}
+            {#                <option value="" class="label" value="">En</option>#}
+            {#                <option value="1">English</option>#}
+            {#                <option value="2">Nepali</option>#}
+            {##}
+            {#              </select>#}
         </div>
         <div class="clearfix"></div>
     </div>
+    <div class="clearfix"></div>
 </div>
