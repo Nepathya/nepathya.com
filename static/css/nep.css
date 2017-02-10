@@ -466,6 +466,7 @@ ul.social li a i:hover {
     font-weight: bold;
     padding: 15px;
     color: #FFFFFF;
+    overflow: hidden;
 }
 
 .outer-wrapper:hover .inner-image-content img {
