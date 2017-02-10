@@ -36,7 +36,7 @@ ul.wmuSliderPagination,
 }
 
 .header {
-    overflow: hidden;
+    overflow: visible;
 }
 
 .header .container {
@@ -113,9 +113,10 @@ ul.nav:hover {
 }
 
 .banner_right {
-    width: 65%;
+    width: 55%;
     /*margin: 0 !important;*/
     margin-left: 4em;
+    padding-top: 8em;
 }
 
 .bannertop_box {
