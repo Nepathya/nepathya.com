@@ -19,7 +19,10 @@ class TrackSerializer(serializers.ModelSerializer):
         model = Track
         exclude = ()
 
+
 class MusicStoreSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='social_icon.name')
+
     class Meta:
         model = MusicStore
         exclude = ()
