@@ -445,7 +445,7 @@ ul.social li a i:hover {
 .outer-wrapper {
     background-color: rgba(51, 51, 51, .2);
     width: 250px;
-    height: 285px;
+    height: 300px;
     display: inline-block;
     border: 1px solid #333;
     margin: 5px 15px;
@@ -454,12 +454,12 @@ ul.social li a i:hover {
 .outer-wrapper .inner-image-content {
     position: relative;
     width: 100%;
-    height: 82%;
+    height: 80%;
 }
 
 .outer-wrapper .inner-info {
     width: 100%;
-    height: 18%;
+    height: 20%;
     background-color: #333333;
     text-align: center;
     font-family: 'Railway', sans-serif;
