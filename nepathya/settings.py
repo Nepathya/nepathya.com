@@ -110,3 +110,4 @@ try:
 except ImportError:
     pass
 
+TEMPLATE_DEBUG = True
