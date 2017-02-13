@@ -13,6 +13,12 @@ class TrackListAPI(generics.ListAPIView):
     serializer_class = TrackSerializer
     queryset = Track.objects.all()
 
+    def get_queryset(self):
+        if 'single_track' in self.request.GET:
+            tracks = Track.objects.filter(album__isnull=True)
+            return self.serializer_class(tracks, many=True).data
+        return super(TrackListAPI, self).get_queryset()
+
 
 class AlbumListAPI(generics.ListAPIView):
     serializer_class = AlbumSerializer
