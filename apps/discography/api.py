@@ -1,4 +1,5 @@
 from rest_framework import generics
+from rest_framework.response import Response
 
 from .models import Label, Track, Album, Genre
 from .serializers import LabelSerializer, TrackSerializer, AlbumSerializer, GenreSerializer
@@ -13,11 +14,10 @@ class TrackListAPI(generics.ListAPIView):
     serializer_class = TrackSerializer
     queryset = Track.objects.all()
 
-    def get_queryset(self):
-        if 'single_track' in self.request.GET:
-            tracks = Track.objects.filter(album__isnull=True)
-            return self.serializer_class(tracks, many=True).data
-        return super(TrackListAPI, self).get_queryset()
+
+class SingleTrackListAPI(generics.ListAPIView):
+    serializer_class = TrackSerializer
+    queryset = Track.objects.filter(album__isnull=True)
 
 
 class AlbumListAPI(generics.ListAPIView):

@@ -16,6 +16,7 @@ api_urls = [
     url(r'^api/albums/$', api.AlbumListAPI.as_view()),
     url(r'^api/albums/(?P<pk>\d+)/$', api.AlbumDetailAPI.as_view()),
     url(r'^api/tracks/$', api.TrackListAPI.as_view()),
+    url(r'^api/single_tracks/$', api.SingleTrackListAPI.as_view()),
     url(r'^api/labels/$', api.LabelListAPI.as_view()),
 ]
 
