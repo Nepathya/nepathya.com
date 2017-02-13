@@ -372,9 +372,9 @@ ul.social li a i:hover {
 
 .total-tracks-count:hover a {
     color: #000;
-} 
+}
 
-.total-tracks-count:hover{
+.total-tracks-count:hover {
     background-color: #fff51f;
     color: #000;
 }
@@ -438,10 +438,9 @@ ul.social li a i:hover {
     padding-left: 25px;
 }
 
-.ticket-location p span:not(:last-child)::after{
+.ticket-location p span:not(:last-child)::after {
     content: ',';
 }
-
 
 /*Video css*/
 .outer-wrapper {
@@ -507,7 +506,7 @@ ul.social li a i:hover {
 }
 
 #album-mask .mask .info i {
-     margin-left: 0;
+    margin-left: 0;
     font-size: 16px;
 }
 
@@ -661,4 +660,48 @@ a:hover {
 .jp-playlist ul li a {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .tracks {
+        text-align: center;
+    }
+
+    .total-tracks-count {
+        display: inline-block;
+        text-align: center;
+        font-size: 31px;
+        border: 0;
+        border-radius: 0%;
+        width: 0px;
+        margin: 25px;
+        background: transparent;
+        line-height: 0px;
+    }
+
+    .album-wrapper {
+        height: 177px;
+    }
+
+    .total-tracks-count:hover a i {
+        color: #fff51f;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 979px) {
+    .album-wrapper {
+        height: 177px;
+    }
+
+    .total-tracks-count {
+        display: inline-block;
+        text-align: center;
+        font-size: 34px;
+        border: 1px solid #333;
+        border-radius: 109%;
+        width: 59px;
+        margin: 5px auto;
+        background: #333;
+        line-height: 55px;
+    }
 }

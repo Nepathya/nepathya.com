@@ -18,7 +18,7 @@
                             <a href="{% url 'album_detail' obj.id %}"><img src="{{ im.url }}" alt=""/></a>
                         {% endthumbnail %}
                     </div>
-                    <div class="col-xs-7 col-sm-8 col-md-9 album-detail">
+                    <div class="col-xs-9 col-sm-10 col-md-5 album-detail">
                         <a href="{% url 'album_detail' obj.id %}">
                             <p>
                                 {{ obj.title }} {% if obj.year %} <span>| {{ obj.year }}</span> {% endif %}
@@ -41,13 +41,14 @@
                         {% endif %}
                     </div>
 
-                    <div class="tracks col-xs-2 col-sm-2 col-md-2">
+                    <div class="tracks text-center col-xs-12 col-sm-12 col-md-6">
                         {% for music_store in obj.album_music_store.all %}
                             <div class="total-tracks-count">
                                 <a href="{{ music_store.url }}"><i class="fa {{ music_store.social_icon.font_awesome_class }}"></i></a>
                             </div>
                         {% endfor %}
                     </div>
+
                 </div>
             </div>
         {% endfor %}
@@ -64,7 +65,7 @@
                                 <a href="{% url 'album_detail' obj.id %}"><img src="{{ im.url }}" alt=""/></a>
                             {% endthumbnail %}
                         </div>
-                        <div class="col-xs-7 col-sm-8 col-md-9 album-detail">
+                        <div class="col-xs-9 col-sm-10 col-md-5 album-detail">
                             <a href="{% url 'album_detail' obj.id %}">
                                 <p>
                                     {{ obj.title }} {% if obj.year %} <span>| {{ obj.year }}</span> {% endif %}
@@ -86,7 +87,7 @@
                                 </p>
                             {% endif %}
                         </div>
-                        <div class="tracks col-xs-2 col-sm-2 col-md-2">
+                        <div class="tracks text-center col-xs-12 col-sm-12 col-md-6">
                             {% for music_store in obj.track_music_store.all %}
                                 <div class="total-tracks-count">
                                     <a href="{{ music_store.url }}"><i class="fa {{ music_store.social_icon.font_awesome_class }}"></i></a>
