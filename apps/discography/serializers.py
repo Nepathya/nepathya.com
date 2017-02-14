@@ -14,17 +14,19 @@ class GenreSerializer(serializers.ModelSerializer):
         exclude = ()
 
 
-class TrackSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Track
-        exclude = ()
-
-
 class MusicStoreSerializer(serializers.ModelSerializer):
     name = serializers.ReadOnlyField(source='social_icon.name')
 
     class Meta:
         model = MusicStore
+        exclude = ()
+
+
+class TrackSerializer(serializers.ModelSerializer):
+    track_music_store = MusicStoreSerializer(many=True)
+    
+    class Meta:
+        model = Track
         exclude = ()
 
 
