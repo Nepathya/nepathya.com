@@ -18,6 +18,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'sorl.thumbnail',
     'rest_framework',
+    'fcm',
     # 'rest_framework.authtoken',
     # 'linaro_django_pagination',
     # 'webstack_django_sorting',
@@ -104,6 +105,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False
+
+FCM_APIKEY = "AAAAmVB3Xyo:APA91bErbKY5vOPrQaOz1tYx6VoyV34xg7FXt-lvEDBa98S11Ld0y5LPlElmT59126JLlUH77XFG8lJjAC9PgR7wI6bmpTQAmwQ2o_o6Gi5cHk7qPqAR8yiFW00Xo8XYj5mwz5Zch5LgBuGO2BNi4LtBsBG6_6lfWQ"
+
+FCM_MAX_RECIPIENTS = 10000
 
 try:
     from .local_settings import *  # noqa

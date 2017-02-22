@@ -6,3 +6,4 @@ requests
 Pillow
 #easy-thumbnails
 sorl-thumbnail
+django-fcm
