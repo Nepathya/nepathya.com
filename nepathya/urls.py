@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^events/', include('apps.events.urls')),
     url(r'^feedbacks/', include('apps.feedback.urls')),
     url(r'fcm/', include('fcm.urls')),
+    url(r'push_notification/', include('apps.push_notification.urls')),
 ]
 
 from django.conf.urls.static import static

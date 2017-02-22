@@ -29,6 +29,7 @@ INSTALLED_APPS = (
     'apps.video',
     'apps.events',
     'apps.feedback',
+    'apps.push_notification',
 )
 
 MIDDLEWARE_CLASSES = (
