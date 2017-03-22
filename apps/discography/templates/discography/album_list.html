@@ -2,12 +2,12 @@
 {% load thumbnail %}
 
 {% block subtitle %}
-    Ablums |
+    Albums |
 {% endblock %}
 
 {% block content %}
     <div class="container">
-        <h2 class="h2">Ablums</h2>
+        <h2 class="h2">Albums</h2>
         <hr/>
 
         {% for obj in object_list %}
@@ -53,7 +53,7 @@
         {% endfor %}
 
         {% if single_tracks %}
-            <h2 class="h2">Single Tracks</h2>
+            <h2 class="h2">Singles</h2>
             <hr/>
 
             {% for obj in single_tracks %}

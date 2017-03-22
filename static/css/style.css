@@ -962,12 +962,12 @@ ul.list1 a {
 .search_footer input[type="text"], .feedback-form input, .feedback-form textarea {
 	padding: 6px 10px;
 	outline: none;
-	color: #a39e28;
+	color: #333333;
 	border: none;
 	width:70.33%;
 	line-height: 1.5em;
 	font-size: 0.8125em;
-	background: #fff51f;
+	background: #ffffff;
 	text-transform: uppercase;
 }
 .feedback-form input, .feedback-form textarea {
